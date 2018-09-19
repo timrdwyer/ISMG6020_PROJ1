@@ -22,13 +22,17 @@ namespace CalculateLetterGrade
 
         }
 
+        //Event handler for when Calculate button is clicked
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+           
+        //Declare variable as type double.  Assign variable of what is entered into text box
             double NumberGrade;
             NumberGrade= double.Parse(txtNumberGrade.Text);
+        //Declare variable for letter grade
             char LetterGrade = 'A';
 
-
+        //Logic for calculating letter grade
             if (NumberGrade >= 90)
             {
                 LetterGrade = 'A';
@@ -43,8 +47,10 @@ namespace CalculateLetterGrade
             }
             else LetterGrade = 'F';
 
+            //Send letter grade to text box
             txtLetterGrade.Text = LetterGrade.ToString();
 
+            //Move focus to number grade text box
             txtNumberGrade.Focus();
 
         }
